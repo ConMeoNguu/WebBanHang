@@ -8,7 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Helmet } from 'react-helmet';
-import { FormattedMessage } from 'react-intl';
+// import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
@@ -17,7 +17,7 @@ import injectReducer from 'utils/injectReducer';
 import makeSelectHomePage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
-import messages from './messages';
+// import messages from './messages';
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.Component {
@@ -25,16 +25,16 @@ export class HomePage extends React.Component {
     return (
       <div>
         <Helmet>
-          <title>HomePage</title>
-          <meta name="description" content="Description of HomePage" />
+          <title>Mỹ phẩm và phụ kiện</title>
         </Helmet>
-        <FormattedMessage {...messages.header} />
+        <p>agsdfasudgf</p>
       </div>
     );
   }
 }
 
 HomePage.propTypes = {
+  // eslint-disable-next-line react/no-unused-prop-types
   dispatch: PropTypes.func.isRequired,
 };
 

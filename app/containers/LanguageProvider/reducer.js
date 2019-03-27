@@ -1,0 +1,28 @@
+/*
+ *
+ * LanguageProvider reducer
+ *
+ */
+
+import { fromJS } from 'immutable';
+
+import { CHANGE_LOCALE } from './constants';
+import { DEFAULT_LOCALE } from '../../i18n';
+
+const currentLocale = localStorage.getItem('locale');
+
+export const initialState = fromJS({
+  locale: currentLocale || DEFAULT_LOCALE,
+});
+
+function languageProviderReducer(state = initialState, action) {
+  switch (action.type) {
+    case CHANGE_LOCALE:
+      localStorage.setItem('locale', action.locale);
+      return state.set('locale', action.locale);
+    default:
+      return state;
+  }
+}
+
+export default languageProviderReducer;
