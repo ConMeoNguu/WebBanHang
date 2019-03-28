@@ -11,10 +11,12 @@ import { Helmet } from 'react-helmet';
 // import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
-
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectHomePage from './selectors';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
+import Slice from '../../components/SileMenu';
 import reducer from './reducer';
 import saga from './saga';
 // import messages from './messages';
@@ -27,7 +29,9 @@ export class HomePage extends React.Component {
         <Helmet>
           <title>Mỹ phẩm và phụ kiện</title>
         </Helmet>
-        <p>agsdfasudgf</p>
+        <Header />
+        <Slice />
+        <Footer />
       </div>
     );
   }

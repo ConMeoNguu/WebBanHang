@@ -12,7 +12,6 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage';
-import Header from 'components/Header';
 
 import GlobalStyle from '../../global-styles';
 
@@ -26,11 +25,9 @@ const AppWrapper = styled.div`
 export default function App() {
   return (
     <AppWrapper>
-      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
       </Switch>
-      {/* <Footer /> */}
       <GlobalStyle />
     </AppWrapper>
   );
