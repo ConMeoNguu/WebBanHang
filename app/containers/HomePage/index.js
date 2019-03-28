@@ -14,6 +14,7 @@ import { compose } from 'redux';
 
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
+import Header from 'components/Header';
 import makeSelectHomePage from './selectors';
 import reducer from './reducer';
 import saga from './saga';
@@ -24,6 +25,7 @@ export class HomePage extends React.Component {
   render() {
     return (
       <div>
+        <Header />
         <Helmet>
           <title>Mỹ phẩm và phụ kiện</title>
         </Helmet>
