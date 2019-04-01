@@ -10,72 +10,47 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 // import classNames from 'classnames';
 // import { FormattedMessage } from 'react-intl';
-import { Grid, Typography, Button, Paper } from '@material-ui/core';
-import {
-  LocalPhone,
-  Search,
-  Person,
-  Menu,
-  ShoppingCart,
-} from '@material-ui/icons';
-import mainLogo from '../../images/icon-512x512.jpg';
+import { Grid, Typography, Paper } from '@material-ui/core';
+// import {
+//   LocalPhone,
+//   Search,
+//   Person,
+//   Menu,
+//   ShoppingCart,
+// } from '@material-ui/icons';
+// import mainLogo from '../../images/icon-512x512.jpg';
 import styles from './style';
 
 /* eslint-disable react/prefer-stateless-function */
 class SileMenu extends React.Component {
   render() {
-    const { classes } = this.props;
+    // eslint-disable-next-line react/prop-types
+    const { classes, slice } = this.props;
     return (
       <div className={classes.body}>
         <div style={{ margin: '0 auto', width: '1200px' }}>
           <Grid item container direction="row">
             <Grid item md={3}>
               <div className={classes.menuslice}>
-                <div>
-                  <Typography className={classes.menuSP}>
-                    TRANG ĐIỂM - MAKEUP
-                  </Typography>
-                  <div>
-                    <Typography>TRANG ĐIỂM</Typography>
-                    <Typography>Trang điểm mắt</Typography>
-                    <Typography>Trang điểm môi</Typography>
-                    <Typography>Trang điểm mặt</Typography>
-                    <Typography>Tẩy trang</Typography>
+                {slice.map(e => (
+                  <div className={classes.hover}>
+                    <Typography className={classes.menuSP}>{e.name}</Typography>
+                    {!e.data ? (
+                      ' '
+                    ) : (
+                      <Paper className={classes.divhover}>
+                        <Typography className={classes.chaLoaiSP}>
+                          {e.name}
+                        </Typography>
+                        {e.data.map(item => (
+                          <Typography className={classes.loaiSP}>
+                            {item}
+                          </Typography>
+                        ))}
+                      </Paper>
+                    )}
                   </div>
-                </div>
-                <div>
-                  <Typography className={classes.menuSP}>
-                    CHĂM SÓC DA - SKINCARE
-                  </Typography>
-                </div>
-                <div>
-                  <Typography className={classes.menuSP}>
-                    CHĂM SÓC TÓC - HAIR
-                  </Typography>
-                </div>
-                <div>
-                  <Typography className={classes.menuSP}>
-                    CHĂM SÓC CƠ THỂ - BATH & BODY
-                  </Typography>
-                </div>
-                <div>
-                  <Typography className={classes.menuSP}>
-                    Tools - Brushes
-                  </Typography>
-                </div>
-                <div>
-                  <Typography className={classes.menuSP}>
-                    Sản phẩm khác - Others
-                  </Typography>
-                </div>
-                <div>
-                  <Typography className={classes.menuSP}>MINI SIZE</Typography>
-                </div>
-                <div>
-                  <Typography className={classes.menuSP}>
-                    SET QUÀ TẶNG - GIFT
-                  </Typography>
-                </div>
+                ))}
               </div>
             </Grid>
             <Grid item md={6} />
