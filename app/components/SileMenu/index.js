@@ -6,19 +6,8 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 import { withStyles } from '@material-ui/core/styles';
-// import classNames from 'classnames';
-// import { FormattedMessage } from 'react-intl';
 import { Grid, Typography, Paper } from '@material-ui/core';
-// import {
-//   LocalPhone,
-//   Search,
-//   Person,
-//   Menu,
-//   ShoppingCart,
-// } from '@material-ui/icons';
-// import mainLogo from '../../images/icon-512x512.jpg';
 import styles from './style';
 
 /* eslint-disable react/prefer-stateless-function */

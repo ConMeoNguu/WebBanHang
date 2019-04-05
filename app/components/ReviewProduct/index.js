@@ -1,6 +1,6 @@
 /**
  *
- * Products
+ * ReviewProduct
  *
  */
 
@@ -8,11 +8,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import { Typography, Grid } from '@material-ui/core';
-import { Search, ShoppingCart } from '@material-ui/icons';
+// import { Search, ShoppingCart } from '@material-ui/icons';
 import styles from './style';
 
 /* eslint-disable react/prefer-stateless-function */
-class Products extends React.Component {
+class ReviewProduct extends React.Component {
   state = {
     // bottom: false,
   };
@@ -26,21 +26,9 @@ class Products extends React.Component {
           <div className={classes.borderSP}>
             <img src={products.img} alt="logo" height="250px" />
             <div className={classes.xemProducts}>
-              <Grid item container direction="row">
-                <Grid item md={6}>
-                  <Typography
-                    className={classes.textXemvsmua}
-                    style={{ borderRight: '1px solid #FFF' }}
-                  >
-                    <ShoppingCart style={{ width: '18px' }} /> MUA HÀNG
-                  </Typography>
-                </Grid>
-                <Grid item md={6}>
-                  <Typography className={classes.textXemvsmua}>
-                    <Search style={{ width: '18px' }} /> XEM SẢN PHẨM
-                  </Typography>
-                </Grid>
-              </Grid>
+              <Typography className={classes.textXemvsmua}>
+                23, Tháng 3
+              </Typography>
             </div>
           </div>
           <div className={classes.ThongTinSp}>
@@ -73,8 +61,8 @@ class Products extends React.Component {
   }
 }
 
-Products.propTypes = {
+ReviewProduct.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Products);
+export default withStyles(styles)(ReviewProduct);

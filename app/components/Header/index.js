@@ -25,6 +25,10 @@ import styles from './style';
 
 /* eslint-disable react/prefer-stateless-function */
 class Header extends React.Component {
+  state = {
+    search: '',
+  };
+
   render() {
     const { classes } = this.props;
     return (
@@ -91,6 +95,9 @@ class Header extends React.Component {
                     <input
                       className={classes.input}
                       placeholder="Nhập từ khóa tìm kiếm"
+                      // onChange={this.onchange()}
+                      // value={this.state.search}
+                      // name="search"
                     />
                     <Button className={classes.iconSeach}>
                       <Search />
@@ -212,6 +219,10 @@ class Header extends React.Component {
       </div>
     );
   }
+
+  // onchange = event => {
+  //   this.setState({ [event.target.name]: [event.target.value] });
+  // };
 }
 
 Header.propTypes = {
