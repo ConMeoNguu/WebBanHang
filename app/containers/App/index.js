@@ -12,9 +12,12 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage';
+import ListPage from 'containers/ListPage';
 import LoginPage from 'containers/LoginPage';
-
+import ProductsPage from '../ProductsPage';
 import GlobalStyle from '../../global-styles';
+import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 const AppWrapper = styled.div`
   margin: 0 auto;
@@ -26,13 +29,20 @@ const AppWrapper = styled.div`
 export default function App() {
   return (
     <AppWrapper>
+      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
       </Switch>
       <Switch>
+        <Route exact path="/products" component={ProductsPage} />
+      </Switch>
+      <Switch>
         <Route exact path="/login" component={LoginPage} />
       </Switch>
-      {/* <Footer /> */}
+      <Switch>
+        <Route exact path="/list" component={ListPage} />
+      </Switch>
+      <Footer />
       <GlobalStyle />
     </AppWrapper>
   );

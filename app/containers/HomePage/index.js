@@ -14,12 +14,69 @@ import { compose } from 'redux';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectHomePage from './selectors';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+// import Footer from '../../components/Footer';
+// import Header from '../../components/Header';
 import Slice from '../../components/SileMenu';
+// import Products from '../ProductsPage';
 import reducer from './reducer';
 import saga from './saga';
 // import messages from './messages';
+
+const loaiSp = [
+  {
+    name: 'TRANG ĐIỂM - MAKEUP',
+    data: [
+      'Trang điểm mắt-FACE',
+      'Trang điểm môi-LIPS',
+      'Trang điểm mặt-EYE',
+      'Tẩy trang - MAKEUP REMOVER',
+    ],
+  },
+  {
+    name: 'CHĂM SÓC DA - SKINCARE',
+    data: [
+      'Sữa rửa mặt - CLEANSERS',
+      'Trang điểm môi',
+      'Trang điểm mặt',
+      'Tẩy trang',
+    ],
+  },
+  {
+    name: 'CHĂM SÓC TÓC - HAIR',
+    data: ['Trang điểm mắt', 'Trang điểm môi', 'Trang điểm mặt', 'Tẩy trang'],
+  },
+  {
+    name: 'CHĂM SÓC CƠ THỂ - BATH & BODY',
+    data: ['Trang điểm mắt', 'Trang điểm môi', 'Trang điểm mặt', 'Tẩy trang'],
+  },
+  {
+    name: 'Tools - Brushes',
+    data: [
+      'Trang điểm mắt-FACE',
+      'Trang điểm môi-LIPS',
+      'Trang điểm mặt-EYE',
+      'Tẩy trang - MAKEUP REMOVER',
+    ],
+  },
+  {
+    name: 'Sản phẩm khác - Others',
+    data: [
+      'Sữa rửa mặt - CLEANSERS',
+      'Trang điểm môi',
+      'Trang điểm mặt',
+      'Tẩy trang',
+    ],
+  },
+  {
+    name: 'MINI SIZE',
+    data: ['Trang điểm mắt', 'Trang điểm môi', 'Trang điểm mặt', 'Tẩy trang'],
+  },
+  {
+    name: 'SET QUÀ TẶNG - GIFT',
+    // data: ['Trang điểm mắt', 'Trang điểm môi', 'Trang điểm mặt', 'Tẩy trang'],
+  },
+];
+// console.log(loaiSp);
 
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.Component {
@@ -29,9 +86,10 @@ export class HomePage extends React.Component {
         <Helmet>
           <title>Mỹ phẩm và phụ kiện</title>
         </Helmet>
-        <Header />
-        <Slice />
-        <Footer />
+        {/* <Header /> */}
+        <Slice slice={loaiSp} />
+        {/* <Products /> */}
+        {/* <Footer /> */}
       </div>
     );
   }
