@@ -16,6 +16,7 @@ import { ConnectedRouter } from 'connected-react-router/immutable';
 import FontFaceObserver from 'fontfaceobserver';
 import history from 'utils/history';
 import 'sanitize.css/sanitize.css';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 // Import root app
 import App from 'containers/App';
@@ -26,6 +27,7 @@ import App from 'containers/App';
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 // import 'file-loader?name=.htaccess!./.htaccess'; // eslint-disable-line import/extensions
 
+// import red from '@material-ui/core/colors/red';
 import configureStore from './configureStore';
 
 // Import i18n messages
@@ -44,14 +46,26 @@ openSansObserver.load().then(() => {
 const initialState = {};
 const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      light: '#E91E63',
+      main: '#DC1C4C',
+      dark: '#D81B60',
+      contrastText: '#fff',
+    },
+  },
+});
 
 const render = () => {
   ReactDOM.render(
-    <Provider store={store}>
-      <ConnectedRouter history={history}>
-        <App />
-      </ConnectedRouter>
-    </Provider>,
+    <MuiThemeProvider theme={theme}>
+      <Provider store={store}>
+        <ConnectedRouter history={history}>
+          <App />
+        </ConnectedRouter>
+      </Provider>
+    </MuiThemeProvider>,
     MOUNT_NODE,
   );
 };

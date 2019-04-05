@@ -122,9 +122,12 @@ class Header extends React.Component {
         <div className={classes.border}>
           <div className={classes.container2}>
             <Grid container direction="row" style={{ height: '50px' }}>
-              <div className={classes.menu} style={{ padding: '13px' }}>
-                <Menu style={{ float: 'left' }} />
-                <Typography style={{ paddingLeft: '40px' }}>
+              <div
+                className={classes.menu}
+                style={{ padding: '13px', textAlign: 'center' }}
+              >
+                <Menu style={{ float: 'left', color: '#fff' }} />
+                <Typography style={{ paddingLeft: '40px', color: '#fff' }}>
                   DANH MỤC SẢN PHẨM
                 </Typography>
               </div>

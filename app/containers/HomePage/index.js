@@ -14,19 +14,18 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
-import { Grid, Typography } from '@material-ui/core';
-import { NavigateBefore, NavigateNext } from '@material-ui/icons';
+// import { Grid, Typography } from '@material-ui/core';
+// import { NavigateBefore, NavigateNext } from '@material-ui/icons';
 import makeSelectHomePage from './selectors';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
+// import Footer from '../../components/Footer';
+// import Header from '../../components/Header';
 import Slice from '../../components/SileMenu';
-import Products from '../../components/Products';
-import ReviewProduct from '../../components/ReviewProduct';
+// import Products from '../ProductsPage';
 import reducer from './reducer';
 import anh1 from '../../images/anh1.jpg';
 import anh2 from '../../images/anh2.jpg';
-import blog1 from '../../images/blog1.jpg';
-import blog2 from '../../images/blog2.jpg';
+// import blog1 from '../../images/blog1.jpg';
+// import blog2 from '../../images/blog2.jpg';
 import styles from './style';
 
 import saga from './saga';
@@ -151,43 +150,43 @@ const productsSelling = [
   },
 ];
 
-const arrREVIEW = [
-  {
-    name: 'AHA HAY BHA? ĐÂU LÀ SỰ LỰA CHỌN HOÀN HẢO CHO LÀN DA CỦA BẠN?',
-    img: blog1,
-    time: '27, Tháng 3',
-    content:
-      'Những cô nàng/ anh chàng bước vào độ tuổi dậy thì bắt đầu phải đối mặt với những vấn đề về da như dầu nhờn, mụn,... nhưng vẫn loay hoay phải chăm sóc da như thế nào?!',
-  },
-  {
-    name: '5 TIPS GIỮ LỚP MAKE UP LÂU TRÔI NGÀY NẮNG NÓNG',
-    img: blog2,
-    time: '26, Tháng 3',
-    content:
-      'Cuối cùng thì ngày đó cũng đã đến, những ngày hè oi bức sắp bắt đầu...',
-  },
-  {
-    name: '7 CÂY SON ĐỎ LẠNH VỪA SANG CHẢNH LẠI TÔN DA NÀNG NÀO CŨNG NÊN CÓ',
-    img: blog1,
-    time: '23, Tháng 3',
-    content:
-      'Dù hiện tại trên thị trường có rất nhiều màu son, tuy nhiên màu son đỏ...',
-  },
-  {
-    name: '4 BƯỚC SKINCARE CƠ BẢN & NHỮNG SẢN PHẨM ',
-    img: blog2,
-    time: '22, Tháng 3',
-    content:
-      'Với những người mới tập tành Skin care thì chắc chắn sẽ băn khoăn với việc...',
-  },
-  {
-    name: 'ROUTINE MAKE UP CHO NHỮNG CÔ NÀNG DA DẦU MỤN',
-    img: blog2,
-    time: '18, Tháng 3',
-    content:
-      'Ra đường cũng muốn make up cho xinh, nhưng khổ nỗi chỉ được 2 - 3...',
-  },
-];
+// const arrREVIEW = [
+//   {
+//     name: 'AHA HAY BHA? ĐÂU LÀ SỰ LỰA CHỌN HOÀN HẢO CHO LÀN DA CỦA BẠN?',
+//     img: blog1,
+//     time: '27, Tháng 3',
+//     content:
+//       'Những cô nàng/ anh chàng bước vào độ tuổi dậy thì bắt đầu phải đối mặt với những vấn đề về da như dầu nhờn, mụn,... nhưng vẫn loay hoay phải chăm sóc da như thế nào?!',
+//   },
+//   {
+//     name: '5 TIPS GIỮ LỚP MAKE UP LÂU TRÔI NGÀY NẮNG NÓNG',
+//     img: blog2,
+//     time: '26, Tháng 3',
+//     content:
+//       'Cuối cùng thì ngày đó cũng đã đến, những ngày hè oi bức sắp bắt đầu...',
+//   },
+//   {
+//     name: '7 CÂY SON ĐỎ LẠNH VỪA SANG CHẢNH LẠI TÔN DA NÀNG NÀO CŨNG NÊN CÓ',
+//     img: blog1,
+//     time: '23, Tháng 3',
+//     content:
+//       'Dù hiện tại trên thị trường có rất nhiều màu son, tuy nhiên màu son đỏ...',
+//   },
+//   {
+//     name: '4 BƯỚC SKINCARE CƠ BẢN & NHỮNG SẢN PHẨM ',
+//     img: blog2,
+//     time: '22, Tháng 3',
+//     content:
+//       'Với những người mới tập tành Skin care thì chắc chắn sẽ băn khoăn với việc...',
+//   },
+//   {
+//     name: 'ROUTINE MAKE UP CHO NHỮNG CÔ NÀNG DA DẦU MỤN',
+//     img: blog2,
+//     time: '18, Tháng 3',
+//     content:
+//       'Ra đường cũng muốn make up cho xinh, nhưng khổ nỗi chỉ được 2 - 3...',
+//   },
+// ];
 /* eslint-disable react/prefer-stateless-function */
 export class HomePage extends React.Component {
   state = {
@@ -214,163 +213,17 @@ export class HomePage extends React.Component {
   }
 
   render() {
-    const { classes } = this.props;
-    const arrProducts = this.updateProduct();
+    // const { classes } = this.props;
+    // const arrProducts = this.updateProduct();
     return (
       <div>
         <Helmet>
           <title>Mỹ phẩm và phụ kiện</title>
         </Helmet>
-        <Header />
+        {/* <Header /> */}
         <Slice slice={loaiSp} />
-        {/* phần sản phẩm hot và bán chạy trong tháng */}
-        <div className={classes.body}>
-          <div
-            style={{ width: '1200px', margin: '0 auto', position: 'relative' }}
-          >
-            <div className={classes.divSpHot}>
-              <Grid item container direction="row">
-                <Grid item md={7}>
-                  <Typography className={classes.titelSpHot}>
-                    {this.getTitelSP()}
-                  </Typography>
-                </Grid>
-                <Grid item md={5}>
-                  <Grid item container direction="row">
-                    <Typography
-                      className={
-                        this.state.isHot ? classes.btnActive : classes.btnHot
-                      }
-                      style={{ borderRight: '1px solid #ddd' }}
-                      onClick={() => this.checkIsHot()}
-                    >
-                      HÔM NAY CÓ GÌ HOT??
-                    </Typography>
-                    <Typography
-                      className={
-                        this.state.isSelling
-                          ? classes.btnActive
-                          : classes.btnHot
-                      }
-                      onClick={() => this.checkisSelling()}
-                    >
-                      BÁN CHẠY TRONG THÁNG
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </div>
-            {this.updateProduct().length !== 0 ? (
-              <div className={classes.bodySP}>
-                <Grid item container direction="row">
-                  <Grid item md={3}>
-                    <Products
-                      products={arrProducts[this.setIndex(this.state.index)]}
-                    />
-                  </Grid>
-                  <Grid item md={3}>
-                    <Products
-                      products={
-                        arrProducts[this.setIndex(this.state.index + 1)]
-                      }
-                    />
-                  </Grid>
-                  <Grid item md={3}>
-                    <Products
-                      products={
-                        arrProducts[this.setIndex(this.state.index + 2)]
-                      }
-                    />
-                  </Grid>
-                  <Grid item md={3}>
-                    <Products
-                      products={
-                        arrProducts[this.setIndex(this.state.index + 3)]
-                      }
-                    />
-                  </Grid>
-                </Grid>
-                <div className={classes.btnNext}>
-                  <Grid item container direction="row">
-                    <NavigateBefore
-                      className={classes.before}
-                      style={{ left: '-3%' }}
-                      onClick={() => this.beforeProducts()}
-                    />
-                    <NavigateNext
-                      className={classes.before}
-                      style={{ right: '0' }}
-                      onClick={() => this.nextProducts()}
-                    />
-                  </Grid>
-                </div>
-              </div>
-            ) : (
-              ''
-            )}
-          </div>
-        </div>
-        {/* Phần Blog và REVIEW */}
-        <div className={classes.body}>
-          <div
-            style={{ width: '1200px', margin: '0 auto', position: 'relative' }}
-          >
-            <div className={classes.divSpHot}>
-              <Typography className={classes.titelSpHot}>
-                BEAUTY TIPS/REVIEW
-              </Typography>
-            </div>
-            {this.updateProduct().length !== 0 ? (
-              <div className={classes.bodySP}>
-                <Grid item container direction="row">
-                  <Grid item md={3}>
-                    <ReviewProduct
-                      products={arrProducts[this.setIndex(this.state.index)]}
-                    />
-                  </Grid>
-                  <Grid item md={3}>
-                    <ReviewProduct
-                      products={
-                        arrProducts[this.setIndex(this.state.index + 1)]
-                      }
-                    />
-                  </Grid>
-                  <Grid item md={3}>
-                    <ReviewProduct
-                      products={
-                        arrProducts[this.setIndex(this.state.index + 2)]
-                      }
-                    />
-                  </Grid>
-                  <Grid item md={3}>
-                    <ReviewProduct
-                      products={
-                        arrProducts[this.setIndex(this.state.index + 3)]
-                      }
-                    />
-                  </Grid>
-                </Grid>
-                <div className={classes.btnNext}>
-                  <Grid item container direction="row">
-                    <NavigateBefore
-                      className={classes.before}
-                      style={{ left: '-3%' }}
-                      onClick={() => this.beforeProducts()}
-                    />
-                    <NavigateNext
-                      className={classes.before}
-                      style={{ right: '0' }}
-                      onClick={() => this.nextProducts()}
-                    />
-                  </Grid>
-                </div>
-              </div>
-            ) : (
-              ''
-            )}
-          </div>
-        </div>
-        <Footer />
+        {/* <Products /> */}
+        {/* <Footer /> */}
       </div>
     );
   }
@@ -432,7 +285,7 @@ export class HomePage extends React.Component {
 HomePage.propTypes = {
   // eslint-disable-next-line react/no-unused-prop-types
   dispatch: PropTypes.func.isRequired,
-  classes: PropTypes.object.isRequired,
+  // classes: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({

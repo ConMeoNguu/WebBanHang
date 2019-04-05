@@ -20,6 +20,7 @@ const styles = () => ({
     width: '100%',
     padding: '8px 10px',
     marginTop: '8px',
+    borderRadius: 25,
   },
   input: {
     width: '80%',
@@ -58,10 +59,12 @@ const styles = () => ({
     right: '-10px',
     display: 'none',
     width: '150px',
+    zIndex: 2000,
   },
   menu: {
     width: '25%',
     background: '#DC1C4C',
+    borderRadius: 5,
   },
   floatLeft: {
     float: 'left',
@@ -69,8 +72,8 @@ const styles = () => ({
     cursor: 'pointer',
   },
   menuHover: {
-    fontSize: '14px',
-    fontWeight: 'bold',
+    fontSize: '12px',
+    fontWeight: 700,
     '&:hover': {
       color: 'red',
     },
@@ -81,11 +84,13 @@ const styles = () => ({
     width: '13%',
     cursor: 'pointer',
     background: '#DC1C4C',
+    borderRadius: 5,
     padding: '13px',
     position: 'relative',
     '&:hover $divTTCart': {
       display: 'block',
     },
+    zIndex: 1000,
   },
   divTTCart: {
     width: '280px',

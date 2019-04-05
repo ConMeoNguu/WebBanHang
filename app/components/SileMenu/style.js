@@ -2,6 +2,7 @@ const styles = () => ({
   body: {
     margin: '15px 0',
     minHeight: '350px',
+    display: 'none',
   },
   menuSP: {
     padding: '15px',

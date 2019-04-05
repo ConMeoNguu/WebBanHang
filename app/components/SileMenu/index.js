@@ -43,10 +43,7 @@ class SileMenu extends React.Component {
               </div>
             </Grid>
             <Grid item md={6} />
-            <Grid item md={3}>
-              <Typography>A</Typography>
-              <Typography>A</Typography>
-            </Grid>
+            <Grid item md={3} />
           </Grid>
         </div>
       </div>

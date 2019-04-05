@@ -17,9 +17,9 @@ import {
   LocalPhone,
   LocationOn,
   Email,
-  Avatar,
+  //   Avatar,
 } from '@material-ui/icons';
-import youtobe from '../../images/youtube.png';
+// import youtobe from '../../images/youtube.png';
 import styles from './style';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -218,7 +218,11 @@ class Footer extends React.Component {
                 MỸ PHẨM PHỤ KIỆN
               </Typography>
             </Grid>
-            <Grid item md={3} style={{ padding: '0 15px', borderLeft: '1px solid #585858',  }}>
+            <Grid
+              item
+              md={3}
+              style={{ padding: '0 15px', borderLeft: '1px solid #585858' }}
+            >
               <Typography className={classes.textNd}>
                 <LocationOn className={classes.iconLocation} />
                 HÀ NỘI
@@ -232,7 +236,11 @@ class Footer extends React.Component {
                 HÀ NỘI
               </Typography>
             </Grid>
-            <Grid item md={3} style={{ padding: '0 15px', borderLeft: '1px solid #585858', }}>
+            <Grid
+              item
+              md={3}
+              style={{ padding: '0 15px', borderLeft: '1px solid #585858' }}
+            >
               <Typography className={classes.textNd}>
                 <LocationOn className={classes.iconLocation} />
                 HÀ NỘI
@@ -246,7 +254,11 @@ class Footer extends React.Component {
                 HÀ NỘI
               </Typography>
             </Grid>
-            <Grid item md={3} style={{ padding: '0 15px', borderLeft: '1px solid #585858', }}>
+            <Grid
+              item
+              md={3}
+              style={{ padding: '0 15px', borderLeft: '1px solid #585858' }}
+            >
               <Typography className={classes.textNd}>
                 <LocationOn className={classes.iconLocation} />
                 HÀ NỘI
@@ -270,10 +282,12 @@ class Footer extends React.Component {
             <Grid item md={3} />
             <Grid item md={9} style={{ padding: '0 15px' }}>
               <Typography className={classes.textNd}>
-                <LocalPhone className={classes.iconLocation} /> Điện thoại: 0964241611
+                <LocalPhone className={classes.iconLocation} /> Điện thoại:
+                0964241611
               </Typography>
               <Typography className={classes.textNd}>
-                <Email className={classes.iconLocation} /> Địa chỉ email: cskh@myphamphukien.com
+                <Email className={classes.iconLocation} /> Địa chỉ email:
+                cskh@myphamphukien.com
               </Typography>
               <Grid container>{/* <Avatar src={youtobe} /> */}</Grid>
             </Grid>
