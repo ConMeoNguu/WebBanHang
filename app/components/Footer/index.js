@@ -55,7 +55,7 @@ class Footer extends React.Component {
                   className={classes.car}
                   style={{ transform: 'rotateY(180deg)' }}
                 />{' '}
-                MIỄN PHÍ VẬN CHUYỂN
+                MIỄN PHÍ VẬN CHUYỂN ádjthat
               </Typography>
               <Typography className={classes.textThongTin}>
                 Vận chuyển toàn quốc - Đơn hàng từ 90K
